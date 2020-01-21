@@ -19,12 +19,16 @@
 .courses {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   width: 500px;
   margin: auto;
   background-color: #eae7e7;
   height: 400px;
 }
-
+h1 {
+  text-align: center;
+  margin: auto;
+}
 
 

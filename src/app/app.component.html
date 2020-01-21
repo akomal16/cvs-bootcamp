@@ -3,20 +3,36 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<!--<div class="home-page-buttons">-->
-<!--  <button mat-raised-button color="primary">-->
-<!--    Courses-->
-<!--  </button>-->
-<!--  <button mat-raised-button color="accent">-->
-<!--    Awards-->
-<!--  </button>-->
-<!--  <button mat-raised-button color="warn">-->
-<!--    Login-->
-<!--  </button>-->
-<!--</div>-->
+<div class="home-page-buttons">
+  <button mat-raised-button color="primary"
+  (click)="oncourses()">
+    Courses
+  </button>
+  <button mat-raised-button color="accent">
+    Awards
+  </button>
+  <button mat-raised-button color="warn">
+    Login
+  </button>
+</div>
 
-<div class="courses">
-  Courses
+<h1>
+<!--  Course List-->
+   {{ header }}
+</h1>
+<div class="courses" *ngIf="coursesList">
+
+  <div>
+  <p>
+    Course 1
+  </p>
+  <p>
+    Course 2
+  </p>
+  <p>
+    Course 3
+  </p>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
