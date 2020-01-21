@@ -21,14 +21,13 @@
    {{ header }}
 </h1>
 <div class="courses" *ngIf="coursesList">
-<div *ngFor = "let development of developmentPlan" class="development-plan">
-  <p>
-    {{development.courseName}}
-  </p>
-  <p>
-    {{development.status}}
-  </p>
+  <div *ngFor = "let development of developmentPlan" class="development-plan">
+    <p>
+      {{development.courseName}}
+    </p>
+    <p>
+      {{development.status}}
+    </p>
+  </div>
 </div>
-</div>
-
 <router-outlet></router-outlet>

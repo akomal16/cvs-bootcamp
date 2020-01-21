@@ -16,7 +16,7 @@ export class AppComponent {
     },
     {
       status: 'Not Started',
-      courseName: 'Core Java'
+      courseName: 'Java'
     },
     {
       status: 'Not Started',
