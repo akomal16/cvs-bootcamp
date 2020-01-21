@@ -21,19 +21,13 @@
    {{ header }}
 </h1>
 <div class="courses" *ngIf="coursesList">
-
-  <div *ngFor = "let amar of courses">
-  {{amar}}
-  </div>
-
-<div *ngFor = "let ak of list">
-
-  <h3>
-   {{ak.courseId}}
-  </h3>
-  <h3>
-    {{ak.courseName}}
-  </h3>
+<div *ngFor = "let development of developmentPlan" class="development-plan">
+  <p>
+    {{development.courseName}}
+  </p>
+  <p>
+    {{development.status}}
+  </p>
 </div>
 </div>
 
