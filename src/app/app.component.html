@@ -22,17 +22,19 @@
 </h1>
 <div class="courses" *ngIf="coursesList">
 
-  <div>
-  <p>
-    Course 1
-  </p>
-  <p>
-    Course 2
-  </p>
-  <p>
-    Course 3
-  </p>
+  <div *ngFor = "let amar of courses">
+  {{amar}}
   </div>
+
+<div *ngFor = "let ak of list">
+
+  <h3>
+   {{ak.courseId}}
+  </h3>
+  <h3>
+    {{ak.courseName}}
+  </h3>
+</div>
 </div>
 
 <router-outlet></router-outlet>
