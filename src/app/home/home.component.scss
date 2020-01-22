@@ -1,19 +1,22 @@
+.title-header {
+  margin-top: 45px;
+}
+
 .title {
   align-items: center;
   display: flex;
   justify-content: center;
-
-
 }
+
 .home-page-buttons {
   align-items: center;
   display: flex;
   justify-content: space-between;
   width: 500px;
-  margin: auto;
   background-color: #eae7e7;
-  height: 400px;
-  padding: 0 100px
+  height: 200px;
+  padding: 0 100px;
+  margin: 32px auto;
 }
 
 .courses {
@@ -26,7 +29,7 @@
   background-color: #eae7e7;
   height: 500px;
 }
-h1 {
+h2 {
   text-align: center;
   margin: auto;
 }
