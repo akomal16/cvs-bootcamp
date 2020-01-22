@@ -11,6 +11,7 @@ import { JavaComponent } from './java/java.component';
 import { JavascriptComponent } from './javascript/javascript.component';
 import { HtmlComponent } from './html/html.component';
 import { CssComponent } from './css/css.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CssComponent } from './css/css.component';
     JavaComponent,
     JavascriptComponent,
     HtmlComponent,
-    CssComponent
+    CssComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
