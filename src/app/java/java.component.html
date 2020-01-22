@@ -2,3 +2,10 @@
 <a [routerLink]="['/home']">
   Back
 </a>
+
+<h2>Java Plan</h2>
+<ul>
+  <li *ngFor="let java of javaPlan">
+    {{java.javaSkill}}
+  </li>
+</ul>

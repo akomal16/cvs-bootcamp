@@ -5,11 +5,34 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './java.component.html',
   styleUrls: ['./java.component.scss']
 })
-export class JavaComponent implements OnInit {
+export class JavaComponent {
 
-  constructor() { }
+  javaPlan = [
+    {
+      status: ['Not Started', 'In Progress', 'Done'],
+      javaSkill: 'Angular',
+      link: '/angular'
+    },
+    {
+      status: 'Not Started',
+      javaSkill: 'Java',
+      link: '/java',
+    },
+    {
+      status: 'Not Started',
+      javaSkill: 'HTML',
+      link: '/html',
+    },
+    {
+      status: 'Not Started',
+      javaSkill: 'CSS',
+      link: '/css',
+    },
+    {
+      status: 'Not Started',
+      javaSkill: 'JavaScript',
+      link: '/javascript',
+    },
 
-  ngOnInit() {
-  }
-
+  ];
 }
