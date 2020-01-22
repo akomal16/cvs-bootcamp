@@ -29,8 +29,8 @@
     <p>
       <mat-form-field>
         <mat-select>
-          <mat-option>
-            {{development.status}}
+          <mat-option [value]="development.status">
+            {{development.status = 'test', 'test2'}}
           </mat-option>
         </mat-select>
       </mat-form-field>

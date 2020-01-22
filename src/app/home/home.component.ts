@@ -12,7 +12,7 @@ export class HomeComponent {
   header = 'Choose Option';
   developmentPlan = [
     {
-      status: 'Not Started',
+      status: ['Not Started', 'In Progress', 'Done'],
       courseName: 'Angular',
       link: '/angular'
     },
