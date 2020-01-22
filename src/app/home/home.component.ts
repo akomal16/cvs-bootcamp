@@ -5,11 +5,45 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor() { }
+  title = 'CVS Bootcamp!';
+  coursesList = false;
+  header = 'Choose Option';
+  developmentPlan = [
+    {
+      status: 'Not Started',
+      courseName: 'Angular',
+      link: '/angular'
+    },
+    {
+      status: 'Not Started',
+      courseName: 'Java',
+      link: '/java',
+    },
+    {
+      status: 'Not Started',
+      courseName: 'HTML',
+      link: '/html',
+    },
+    {
+      status: 'Not Started',
+      courseName: 'CSS',
+      link: '/css',
+    },
+    {
+      status: 'Not Started',
+      courseName: 'JavaScript',
+      link: '/javascript',
+    },
 
-  ngOnInit() {
+  ];
+
+  oncourses() {
+    this.coursesList = true;
+    this.header = 'Course List';
+    this.title = 'my courses';
   }
-
 }
+
+

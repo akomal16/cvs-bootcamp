@@ -1,33 +1,33 @@
-<div>
-  <h1 class="title">
-    Welcome to {{ title }}!
-  </h1>
-</div>
-<div class="home-page-buttons">
-  <button mat-raised-button color="primary"
-  (click)="oncourses()">
-    Courses
-  </button>
-  <button mat-raised-button color="accent">
-    Awards
-  </button>
-  <button mat-raised-button color="warn">
-    Login
-  </button>
-</div>
+<!--<div>-->
+<!--  <h1 class="title">-->
+<!--    Welcome to {{ title }}!-->
+<!--  </h1>-->
+<!--</div>-->
+<!--<div class="home-page-buttons">-->
+<!--  <button mat-raised-button color="primary"-->
+<!--  (click)="oncourses()">-->
+<!--    Courses-->
+<!--  </button>-->
+<!--  <button mat-raised-button color="accent">-->
+<!--    Awards-->
+<!--  </button>-->
+<!--  <button mat-raised-button color="warn">-->
+<!--    Login-->
+<!--  </button>-->
+<!--</div>-->
 
-<h1>
-<!--  Course List-->
-   {{ header }}
-</h1>
-<div class="courses" *ngIf="coursesList">
-  <div *ngFor = "let development of developmentPlan" class="development-plan">
-    <p>
-      {{development.courseName}}
-    </p>
-    <p>
-      {{development.status}}
-    </p>
-  </div>
-</div>
+<!--<h1>-->
+<!--&lt;!&ndash;  Course List&ndash;&gt;-->
+<!--   {{ header }}-->
+<!--</h1>-->
+<!--<div class="courses" *ngIf="coursesList">-->
+<!--  <div *ngFor = "let development of developmentPlan" class="development-plan">-->
+<!--    <p>-->
+<!--      {{development.courseName}}-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      {{development.status}}-->
+<!--    </p>-->
+<!--  </div>-->
+<!--</div>-->
 <router-outlet></router-outlet>

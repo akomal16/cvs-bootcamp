@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {AngularComponent} from './angular/angular.component';
 import {JavaComponent} from './java/java.component';
+import {HtmlComponent} from './html/html.component';
+import {CssComponent} from './css/css.component';
+import {JavascriptComponent} from './javascript/javascript.component';
 
 const routes: Routes = [
   {
@@ -21,6 +24,18 @@ const routes: Routes = [
   {
     path: 'java',
     component: JavaComponent
+  },
+  {
+    path: 'html',
+    component: HtmlComponent
+  },
+  {
+    path: 'css',
+    component: CssComponent
+  },
+  {
+    path: 'javascript',
+    component: JavascriptComponent
   },
   {
     path: '**',

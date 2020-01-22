@@ -8,13 +8,19 @@ import {MatButtonModule} from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { AngularComponent } from './angular/angular.component';
 import { JavaComponent } from './java/java.component';
+import { JavascriptComponent } from './javascript/javascript.component';
+import { HtmlComponent } from './html/html.component';
+import { CssComponent } from './css/css.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AngularComponent,
-    JavaComponent
+    JavaComponent,
+    JavascriptComponent,
+    HtmlComponent,
+    CssComponent
   ],
   imports: [
     BrowserModule,

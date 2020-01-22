@@ -1,1 +1,53 @@
 <p>home works!</p>
+<div>
+  <h1 class="title">
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div class="home-page-buttons">
+  <button mat-raised-button color="primary"
+          (click)="oncourses()">
+    Courses
+  </button>
+  <button mat-raised-button color="accent">
+    Awards
+  </button>
+  <button mat-raised-button color="warn">
+    Login
+  </button>
+</div>
+
+<h1>
+  <!--  Course List-->
+  {{ header }}
+</h1>
+<div class="courses" *ngIf="coursesList">
+  <div *ngFor = "let development of developmentPlan" class="development-plan">
+    <p [routerLink]="development.link">
+      {{development.courseName}}
+    </p>
+    <p>
+      {{development.status}}
+    </p>
+  </div>
+</div>
+
+
+<!--// Training-->
+
+<!--Two ways to route, 1. Router Link, 2. Programmatically navigate-->
+
+<!--TODO 1. Router Link-->
+
+<!--<a [routerLink]="['/angular']">-->
+<!--  Angular-->
+<!--</a>-->
+
+
+<!--TODO 2. Programmatically navigate-->
+
+<!--Amar you can ask me to teach you this later-->
+
+<!--<a (click)="myNavigateFunction()">-->
+<!--  Angular-->
+<!--</a>-->
