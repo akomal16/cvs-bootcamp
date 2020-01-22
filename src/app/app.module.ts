@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material';
+import {MatButtonModule, MatFormFieldModule, MatSelectModule} from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { AngularComponent } from './angular/angular.component';
 import { JavaComponent } from './java/java.component';
@@ -26,6 +26,8 @@ import { CssComponent } from './css/css.component';
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule,
     BrowserAnimationsModule
   ],
   providers: [],

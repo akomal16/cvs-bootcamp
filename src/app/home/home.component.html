@@ -27,7 +27,14 @@
       {{development.courseName}}
     </p>
     <p>
-      {{development.status}}
+      <mat-form-field>
+        <mat-select>
+          <mat-option>
+            {{development.status}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
     </p>
   </div>
 </div>
@@ -39,9 +46,9 @@
 
 <!--TODO 1. Router Link-->
 
-<!--<a [routerLink]="['/angular']">-->
-<!--  Angular-->
-<!--</a>-->
+<!--<a [routerLink]="['/angular']">
+  Angular
+</a>-->
 
 
 <!--TODO 2. Programmatically navigate-->
