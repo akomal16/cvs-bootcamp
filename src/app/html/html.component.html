@@ -2,3 +2,10 @@
 <a [routerLink]="['/home']">
   Back
 </a>
+
+<h2>HTML Plan</h2>
+<ul>
+  <li *ngFor="let html of htmlPlan">
+    {{html.htmlSkill}}
+  </li>
+</ul>
