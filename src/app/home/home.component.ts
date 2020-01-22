@@ -44,6 +44,10 @@ export class HomeComponent {
     this.header = 'Course List';
     this.title = 'my courses';
   }
+
+  goBack() {
+    this.coursesList = false;
+  }
 }
 
 

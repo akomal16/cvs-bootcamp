@@ -3,7 +3,7 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<div class="home-page-buttons">
+<div class="home-page-buttons" *ngIf="!coursesList">
   <button mat-raised-button color="primary"
           (click)="oncourses()">
     Courses
@@ -21,6 +21,9 @@
   {{ header }}
 </h2>
 <div class="courses" *ngIf="coursesList">
+  <button (click)="goBack()">
+    Back
+  </button>
   <div *ngFor = "let development of developmentPlan" class="development-plan">
     <p [routerLink]="development.link">
       {{development.courseName}}
