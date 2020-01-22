@@ -28,10 +28,18 @@
     </p>
     <p>
       <mat-form-field>
-        <mat-select>
-          <mat-option [value]="development.status">
-            {{development.status = 'test', 'test2'}}
-          </mat-option>
+<!--        <mat-select [value]="development.status">-->
+<!--          <mat-option [value]="development.status">-->
+<!--            {{development.status}}-->
+<!--          </mat-option>-->
+<!--        </mat-select>-->
+
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="development.status">
+<!--          <mat-option>None</mat-option>-->
+          <mat-option value="option1">Not Started</mat-option>
+          <mat-option value="option2">In Progress</mat-option>
+          <mat-option value="option3">Completed</mat-option>
         </mat-select>
       </mat-form-field>
 
