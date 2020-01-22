@@ -1,4 +1,3 @@
-<p>home works!</p>
 <div>
   <h1 class="title">
     Welcome to {{ title }}!
@@ -26,24 +25,15 @@
     <p [routerLink]="development.link">
       {{development.courseName}}
     </p>
-    <p>
       <mat-form-field>
-<!--        <mat-select [value]="development.status">-->
-<!--          <mat-option [value]="development.status">-->
-<!--            {{development.status}}-->
-<!--          </mat-option>-->
-<!--        </mat-select>-->
-
         <mat-label>Select an option</mat-label>
         <mat-select [(value)]="development.status">
-<!--          <mat-option>None</mat-option>-->
           <mat-option value="option1">Not Started</mat-option>
           <mat-option value="option2">In Progress</mat-option>
           <mat-option value="option3">Completed</mat-option>
         </mat-select>
       </mat-form-field>
 
-    </p>
   </div>
 </div>
 
