@@ -6,6 +6,7 @@ import {JavaComponent} from './java/java.component';
 import {HtmlComponent} from './html/html.component';
 import {CssComponent} from './css/css.component';
 import {JavascriptComponent} from './javascript/javascript.component';
+import {LoginComponent} from "./login/login.component";
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'javascript',
     component: JavascriptComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: '**',
