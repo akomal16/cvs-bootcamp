@@ -6,33 +6,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./java.component.scss']
 })
 export class JavaComponent {
-
+  title =  'Java Topics';
   javaPlan = [
     {
-      status: ['Not Started', 'In Progress', 'Done'],
-      javaSkill: 'Angular',
-      link: '/angular'
+      javaSkill: 'Java Syntax',
+      status: 'Done',
     },
     {
-      status: 'Not Started',
-      javaSkill: 'Java',
-      link: '/java',
+      javaSkill: 'OOP',
+      status: 'In Progress',
     },
     {
+      javaSkill: 'Exception Handling',
       status: 'Not Started',
-      javaSkill: 'HTML',
-      link: '/html',
     },
     {
-      status: 'Not Started',
-      javaSkill: 'CSS',
-      link: '/css',
+      javaSkill: 'Multi Threading',
+      status: 'In Progress',
     },
     {
-      status: 'Not Started',
-      javaSkill: 'JavaScript',
-      link: '/javascript',
+      javaSkill: 'Collections',
+      status: 'In Progress',
     },
-
+    {
+      javaSkill: 'Java IO',
+      status: 'Not Started',
+    },
   ];
 }

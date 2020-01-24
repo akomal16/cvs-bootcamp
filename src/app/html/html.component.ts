@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-html',
@@ -6,34 +6,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./html.component.scss']
 })
 export class HtmlComponent {
+  title = 'HTML Topics';
 
   htmlPlan = [
     {
-      status: ['Not Started', 'In Progress', 'Done'],
-      htmlSkill: 'Angular',
-      link: '/angular'
+      htmlSkill: 'HTML 5',
+      status: 'Done',
     },
     {
-      status: 'Not Started',
-      htmlSkill: 'html',
-      link: '/html',
+      htmlSkill: 'HTML Elements',
+      status: 'Done',
     },
     {
+      htmlSkill: 'DOM',
       status: 'Not Started',
-      htmlSkill: 'HTML',
-      link: '/html',
     },
     {
-      status: 'Not Started',
-      htmlSkill: 'CSS',
-      link: '/css',
+      htmlSkill: 'Form',
+      status: 'Done',
     },
     {
-      status: 'Not Started',
-      htmlSkill: 'JavaScript',
-      link: '/javascript',
+      htmlSkill: 'Styles',
+      status: 'Done',
     },
-
+    {
+      htmlSkill: 'Events',
+      status: 'Not Started',
+    },
+    {
+      htmlSkill: 'SVG',
+      status: 'In Progress',
+    },
   ];
-
 }

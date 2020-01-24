@@ -1,34 +1,34 @@
-<div class="angular-main">
+<div class="title-header">
+  <h1 class="title">
+    {{title}}
+  </h1>
+</div>
+
+<div class="main-container">
   <a [routerLink]="['/home']">
     Back
   </a>
-  <h2>Angular Course</h2>
+
   <div class="course-list">
     <ul>
-      <li>
-        TypeScript Basics
-      </li>
-      <li>
-        Components
-      </li>
-      <li>
-        Modules
-      </li>
-      <li>
-        Data Binding
-      </li>
-      <li>
-        Router
-      </li>
-      <li>
-        Directives
+      <li *ngFor="let topic of angularTopics" class="topic">
+        {{topic.name}}
+<!--        <div [ngClass]="topic.status == 'Not Started' ? 'not-started' : 'in-progress'"-->
+<!--        >-->
+<!--&lt;!&ndash;          {{topic.status}}&ndash;&gt;-->
+<!--        </div>-->
+
+        <div [ngClass]="{
+        'not-started': topic.status === 'Not Started',
+        'in-progress': topic.status === 'In Progress',
+        'done': topic.status === 'Done'
+        }"
+        >
+          {{topic.status}}
+        </div>
       </li>
     </ul>
 
   </div>
 </div>
 
-
-<!--<a [routerLink]="['/angular']">-->
-<!--  Angular-->
-<!--</a>-->

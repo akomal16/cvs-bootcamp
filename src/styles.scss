@@ -1,4 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.title-header {
+  margin-top: 45px;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+
+.main-container {
+  width: 500px;
+  margin: auto;
+  background-color: #eae7e7;
+  height: 400px;
+  padding: 32px 100px;
+}
+
+
+.topic {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  padding: 12px;
+}
+
+
+.not-started {
+  color: #cc0000;
+}
+
+.in-progress {
+  color: #35805a;
+}
+
+.done {
+  color: #4974ff;
+}

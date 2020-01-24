@@ -12,6 +12,7 @@ import { JavascriptComponent } from './javascript/javascript.component';
 import { HtmlComponent } from './html/html.component';
 import { CssComponent } from './css/css.component';
 import { LoginComponent } from './login/login.component';
+import { AwardComponent } from './award/award.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component';
     JavascriptComponent,
     HtmlComponent,
     CssComponent,
-    LoginComponent
+    LoginComponent,
+    AwardComponent
   ],
   imports: [
     BrowserModule,

@@ -41,12 +41,13 @@ export class HomeComponent {
 
   oncourses() {
     this.coursesList = true;
-    this.header = 'Course List';
+    this.header = 'Subject List';
     this.title = 'my courses';
   }
 
   goBack() {
     this.coursesList = false;
+    this.header = 'Choose Option';
   }
 }
 

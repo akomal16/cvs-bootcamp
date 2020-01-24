@@ -1,13 +1,27 @@
-<p>html works!</p>
-<a [routerLink]="['/home']">
-  <button mat-raised-button color="accent">
-    Back
-  </button>
-</a>
+<div class="title-header">
+  <h1 class="title">
+    {{title}}
+  </h1>
+</div>
 
-<h2>HTML Plan</h2>
-<ul>
-  <li *ngFor="let html of htmlPlan">
-    {{html.htmlSkill}}
-  </li>
-</ul>
+<div class="main-container">
+  <a [routerLink]="['/home']">
+    Back
+  </a>
+
+  <div class="course-list">
+    <ul>
+      <li *ngFor="let html of htmlPlan" class="topic">
+        {{html.htmlSkill}}
+        <div [ngClass]="{
+        'not-started': html.status === 'Not Started',
+        'in-progress': html.status === 'In Progress',
+        'done': html.status === 'Done'
+        }">
+          {{html.status}}
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>

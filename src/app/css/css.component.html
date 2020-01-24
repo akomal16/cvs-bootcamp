@@ -1,4 +1,28 @@
-<p>css works!</p>
-<a [routerLink]="['/home']">
-  Back
-</a>
+<div class="title-header">
+  <h1 class="title">
+    {{title}}
+  </h1>
+</div>
+
+<div class="main-container">
+  <a [routerLink]="['/home']">
+    Back
+  </a>
+
+  <div class="course-list">
+    <ul>
+      <li *ngFor="let css of cssPlan" class="topic">
+        {{css. cssSkill}}
+        <div [ngClass]="{
+        'not-started': css.status === 'Not Started',
+        'in-progress': css.status === 'In Progress',
+        'done': css.status === 'Done'
+        }"
+        >
+          {{css.status}}
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>
