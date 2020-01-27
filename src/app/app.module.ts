@@ -13,6 +13,7 @@ import { HtmlComponent } from './html/html.component';
 import { CssComponent } from './css/css.component';
 import { LoginComponent } from './login/login.component';
 import { AwardComponent } from './award/award.component';
+import {CourseService} from "./services/course-service";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { AwardComponent } from './award/award.component';
     MatSelectModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

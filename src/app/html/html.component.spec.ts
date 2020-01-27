@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HtmlComponent } from './html.component';
 
-describe('HtmlComponent', () => {
+xdescribe('HtmlComponent', () => {
   let component: HtmlComponent;
   let fixture: ComponentFixture<HtmlComponent>;
 

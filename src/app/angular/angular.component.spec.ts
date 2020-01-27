@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AngularComponent } from './angular.component';
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('AngularComponent', () => {
   let component: AngularComponent;
@@ -8,6 +9,9 @@ describe('AngularComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule
+      ],
       declarations: [ AngularComponent ]
     })
     .compileComponents();
@@ -21,5 +25,14 @@ describe('AngularComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should have class title header ', () => {
+    const comp = fixture.debugElement.componentInstance;
+    // const header = comp.nati
+    // expect (comp)
+  });
+  fit(`should render correct title`, () => {
+    const amar = fixture.debugElement.componentInstance;
+    expect(amar.title).toEqual('Angular Topics');
   });
 });

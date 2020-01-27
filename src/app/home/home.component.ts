@@ -7,12 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent {
 
-  title = 'CVS Bootcamp!';
+  // title = 'CVS Bootcamp!';
+  title = 'CVS Bootcamp';
   coursesList = false;
   header = 'Choose Option';
+  courseId = 54;
+  isClicked: boolean = false;
+
+
+  // treePlan in an array that containes a 3 string values.
+  treePlan = ['status', 'courseName', 'tree'];
+
   developmentPlan = [
     {
-      status: ['Not Started', 'In Progress', 'Done'],
+      status: 'Not Started',
       courseName: 'Angular',
       link: '/angular'
     },
@@ -36,7 +44,6 @@ export class HomeComponent {
       courseName: 'JavaScript',
       link: '/javascript',
     },
-
   ];
 
   oncourses() {
