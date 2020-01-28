@@ -1,5 +1,5 @@
 <div class="title-header">
-  <h1 class="title">
+  <h1 class="bootcamp-title">
     Welcome to {{ title }}!
   </h1>
 </div>
@@ -7,10 +7,10 @@
   <!--  Course List-->
   {{ header }}
 </h2>
-<div class="home-page-buttons" *ngIf="!coursesList">
 
-  <button mat-raised-button color="primary"
-          (click)="oncourses()">
+<div class="home-page-buttons" *ngIf="!coursesList">
+  <button mat-raised-button color="primary" id="courseButton"
+          (click)="onCourses()">
     Courses
   </button>
   <button mat-raised-button color="accent">

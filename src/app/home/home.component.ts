@@ -46,7 +46,7 @@ export class HomeComponent {
     },
   ];
 
-  oncourses() {
+  onCourses() {
     this.coursesList = true;
     this.header = 'Subject List';
     this.title = 'my courses';
@@ -56,6 +56,7 @@ export class HomeComponent {
     this.coursesList = false;
     this.header = 'Choose Option';
   }
+
 }
 
 

@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CourseService} from "../services/course-service";
+import {CourseService} from '../services/course-service';
 
 @Component({
   selector: 'app-html',
@@ -11,37 +11,7 @@ export class HtmlComponent implements OnInit, OnDestroy {
   }
 
   title = 'HTML Topics';
-
-  htmlPlan = [
-    // {
-    //   htmlSkill: 'HTML 5',
-    //   status: 'Done',
-    // },
-    // {
-    //   htmlSkill: 'HTML Elements',
-    //   status: 'Done',
-    // },
-    // {
-    //   htmlSkill: 'DOM',
-    //   status: 'Not Started',
-    // },
-    // {
-    //   htmlSkill: 'Form',
-    //   status: 'Done',
-    // },
-    // {
-    //   htmlSkill: 'Styles',
-    //   status: 'Done',
-    // },
-    // {
-    //   htmlSkill: 'Events',
-    //   status: 'Not Started',
-    // },
-    // {
-    //   htmlSkill: 'SVG',
-    //   status: 'In Progress',
-    // },
-  ];
+  htmlPlan = [];
 
   ngOnInit(): void {
     console.log('This is on html component initialization');
@@ -54,5 +24,4 @@ export class HtmlComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     console.log('This is on HTML component removal');
   }
-
 }
