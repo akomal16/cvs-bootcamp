@@ -36,17 +36,14 @@ fdescribe('HomeComponent', () => {
       const bootClass = fixture.debugElement.query(By.css('h1'));
       console.log(bootClass.attributes.class, 'log element class');
       expect(bootClass.attributes.class).toBe('bootcamp-title');
+      // Can also be written this way
+      expect(bootClass.attributes).toEqual({class: 'bootcamp-title'});
     });
 
-    it('should full create title', () => {
+    it('should create full title', () => {
       const debugEle = fixture.debugElement.query(By.css('h1'));
       console.log(debugEle.nativeElement.innerText, 'logging elements text');
       expect(debugEle.nativeElement.innerText).toBe('Welcome to CVS Bootcamp!');
-    });
-
-    it('should have correct header',  () => {
-      console.log(component.header, 'log header property');
-      expect(component.header).toBe('Choose Option');
     });
 
     it('should render 3 buttons', () => {
@@ -55,14 +52,30 @@ fdescribe('HomeComponent', () => {
       console.log(buttonCollection.length, ' array of buttons');
       expect(buttonCollection.length).toBe(3);
     });
+    fit('should render courses', () => {
+      const courseDiv = fixture.debugElement.query(By.css('.courses'));
+      component.coursesList = true;
+      console.log(courseDiv, 'log course list**********');
+    });
   });
 
   describe('TypeScript logic testing', () => {
       it('should contain correct title',  () => {
-        console.log(component.title, 'log typescript title property');
-        expect(component.title).toBe('CVS Bootcamp');
-      });
-      it('should show courses', () => {
+      console.log(component.title, 'log typescript title property');
+      expect(component.title).toBe('CVS Bootcamp');
+    });
+
+      it('should contain coursesList',  () => {
+      console.log(component.coursesList, 'log coursesList property');
+      expect(component.coursesList).toBeFalsy();
+    });
+
+      it('should have correct header',  () => {
+      console.log(component.header, 'log header property');
+      expect(component.header).toBe('Choose Option');
+    });
+
+      fit('should show courses', () => {
         console.log(component.coursesList, 'first');
         const courseSpy = spyOn(component, 'onCourses');
         const courseButton = fixture.debugElement.query(By.css('#courseButton'));
@@ -71,9 +84,9 @@ fdescribe('HomeComponent', () => {
         fixture.detectChanges();
         console.log(component.coursesList, 'second');
         expect(courseSpy).toHaveBeenCalled();
-        expect(component.coursesList).toBeTruthy();
-        expect(component.header).toBe('Subject List');
-        expect(component.title).toBe('my courses');
+        // expect(component.coursesList).toBeTruthy();
+        // expect(component.header).toBe('Subject List');
+        // expect(component.title).toBe('my courses');
         // console.log(courseButton, 'log course button');
       });
 

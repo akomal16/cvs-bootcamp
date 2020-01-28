@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent {
 
-  // title = 'CVS Bootcamp!';
   title = 'CVS Bootcamp';
   coursesList = false;
   header = 'Choose Option';
