@@ -11,7 +11,12 @@ export class HtmlComponent implements OnInit, OnDestroy {
   }
 
   title = 'HTML Topics';
-  htmlPlan = [];
+  htmlPlan = [
+    {
+      htmlCourse: 'HTML Basics',
+      status: 'Done',
+    },
+  ];
 
   ngOnInit(): void {
     console.log('This is on html component initialization');

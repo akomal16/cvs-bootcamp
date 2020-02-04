@@ -12,7 +12,7 @@
   <div class="course-list">
     <ul>
       <li *ngFor="let html of htmlPlan" class="topic">
-        {{html.htmlSkill}}
+        {{html.htmlCourse}}
         <div [ngClass]="{
         'not-started': html.status === 'Not Started',
         'in-progress': html.status === 'In Progress',

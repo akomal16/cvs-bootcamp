@@ -14,7 +14,7 @@ export class HomeComponent {
   isClicked: boolean = false;
 
 
-  // treePlan in an array that containes a 3 string values.
+  // treePlan in an array that contains a 3 string values.
   treePlan = ['status', 'courseName', 'tree'];
 
   developmentPlan = [
