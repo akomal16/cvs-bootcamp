@@ -1,11 +1,11 @@
 # .pairs - configuration for 'git pair'
 pairs:
   # <initials>: <Firstname> <Lastname>[; <email-id>]
-  ak: Amarpreet Komal; amarpreet.komal
+  ak: Amarpreet Komal; amar.komal
 
 email:
   prefix: pair
-  domain: CVSHealth.com
+  domain: gmail.com
   # no_solo_prefix: true
 global: true
 
