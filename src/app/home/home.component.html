@@ -24,9 +24,14 @@
 
 
 <div class="courses" *ngIf="coursesList">
-  <button (click)="goBack()" mat-raised-button>
+  <div class="courses-button">
+    <button (click)="goBack()" mat-raised-button>
     Back
   </button>
+  <button (click)="goHome()" mat-raised-button>
+    Home
+  </button>
+  </div>
   <div *ngFor = "let development of developmentPlan" class="development-plan">
     <p [routerLink]="development.link">
       {{development.courseName}}

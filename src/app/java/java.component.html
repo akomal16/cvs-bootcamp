@@ -6,10 +6,22 @@
 
 <div class="main-container">
   <a [routerLink]="['/home']">
-    Back
+    Home
   </a>
 
+
+
+
   <div class="course-list">
+    <div class="courses-button">
+      <button (click)="goBack()" mat-raised-button>
+        Back
+      </button>
+      <button (click)="goHome()" mat-raised-button>
+        Home
+      </button>
+    </div>
+
     <ul>
       <li *ngFor="let java of javaPlan" class="topic">
         {{java.javaSkill}}

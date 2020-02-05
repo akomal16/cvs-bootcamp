@@ -12,6 +12,8 @@ export class JavaComponent implements OnInit, OnDestroy {
   }
 
   title =  'Java Topics';
+  coursesList = false;
+  header = 'Choose Option';
   // javaPlan = [
   //   this.courseService.getJavaData()
   // ];
@@ -62,4 +64,12 @@ export class JavaComponent implements OnInit, OnDestroy {
   //   },
   // ];
 
+  goBack() {
+    this.coursesList = true;
+    this.header = 'Choose Option';
+  }
+  goHome() {
+    this.coursesList = false;
+    this.header = 'Choose Option1111';
+  }
 }

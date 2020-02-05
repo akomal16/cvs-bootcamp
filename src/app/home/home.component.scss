@@ -19,11 +19,20 @@
   background-color: #f3f3f3;
   height: 500px;
 
+  .courses-button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
   button {
     margin: 24px;
     align-self: end;
+    color: #b52a25;
+    background-color: ghostwhite;
+  }
   }
 }
+
 h2 {
   text-align: center;
   margin: auto;

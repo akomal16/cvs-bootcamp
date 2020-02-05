@@ -55,6 +55,10 @@ export class HomeComponent {
     this.coursesList = false;
     this.header = 'Choose Option';
   }
+  goHome() {
+    this.coursesList = false;
+    this.header = 'Choose Option1111';
+  }
 
 }
 

@@ -1,0 +1,12 @@
+# .pairs - configuration for 'git pair'
+pairs:
+  # <initials>: <Firstname> <Lastname>[; <email-id>]
+  ak: Amarpreet Komal; amarpreet.komal
+
+email:
+  prefix: pair
+  domain: CVSHealth.com
+  # no_solo_prefix: true
+global: true
+
+/Users/bguser/workspace/cvs-bootcamp/.pairs
