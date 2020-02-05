@@ -14,6 +14,7 @@ import { CssComponent } from './css/css.component';
 import { LoginComponent } from './login/login.component';
 import { AwardComponent } from './award/award.component';
 import {CourseService} from "./services/course-service";
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {CourseService} from "./services/course-service";
     HtmlComponent,
     CssComponent,
     LoginComponent,
-    AwardComponent
+    AwardComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,

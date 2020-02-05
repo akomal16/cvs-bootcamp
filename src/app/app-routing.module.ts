@@ -8,12 +8,17 @@ import {CssComponent} from './css/css.component';
 import {JavascriptComponent} from './javascript/javascript.component';
 import {LoginComponent} from "./login/login.component";
 import {AwardComponent} from './award/award.component';
+import {CoursesComponent} from './courses/courses.component';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'courses',
+    component: CoursesComponent
   },
   {
     path: 'home',
