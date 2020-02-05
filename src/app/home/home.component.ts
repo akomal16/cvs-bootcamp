@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+  constructor(private coursesRouter: Router, ) {
+
+  }
 
   title = 'CVS Bootcamp';
   coursesList = false;
   header = 'Choose Option';
-  courseId = 54;
-  isClicked: boolean = false;
-
 
   // treePlan in an array that contains a 3 string values.
   treePlan = ['status', 'courseName', 'tree'];
@@ -46,19 +47,21 @@ export class HomeComponent {
   ];
 
   onCourses() {
-    this.coursesList = true;
-    this.header = 'Subject List';
-    this.title = 'my courses';
+    this.coursesRouter.navigate(['/courses']);
+    // this.coursesList = true;
+    // this.header = 'Subject List';
+    // this.title = 'my courses';
+    // [routerLink]="'/courses'"
   }
-
-  goBack() {
-    this.coursesList = false;
-    this.header = 'Choose Option';
-  }
-  goHome() {
-    this.coursesList = false;
-    this.header = 'Choose Option1111';
-  }
+  ngOnInit() {}
+  // goBack() {
+  //   this.coursesList = false;
+  //   this.header = 'Choose Option';
+  // }
+  // goHome() {
+  //   this.coursesList = false;
+  //   this.header = 'Choose Option1111';
+  // }
 
 }
 

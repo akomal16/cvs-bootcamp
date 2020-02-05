@@ -8,14 +8,20 @@
   {{ header }}
 </h2>
 
-<div class="home-page-buttons" *ngIf="!coursesList">
+<div class="home-page-buttons">
+<!--<div class="home-page-buttons" *ngIf="!coursesList">-->
+<!--****** NOTE: don't need ngIf directive and property courseList condition value setup ********-->
+<!--  <div class="home-page-buttons" *ngIf="!coursesList">-->
+<!--  Note: "!" before property work opposite way-->
   <button mat-raised-button color="primary" id="courseButton"
           (click)="onCourses()">
     Courses
   </button>
+
   <button mat-raised-button color="accent">
     Awards
   </button>
+
   <button mat-raised-button color="warn" [routerLink]="'/login'">
     Login
   </button>
@@ -23,30 +29,7 @@
 </div>
 
 
-<div class="courses" *ngIf="coursesList">
-  <div class="courses-button">
-    <button (click)="goBack()" mat-raised-button>
-    Back
-  </button>
-  <button (click)="goHome()" mat-raised-button>
-    Home
-  </button>
-  </div>
-  <div *ngFor = "let development of developmentPlan" class="development-plan">
-    <p [routerLink]="development.link">
-      {{development.courseName}}
-    </p>
-      <mat-form-field>
-        <mat-label>Select an option</mat-label>
-        <mat-select [(value)]="development.status">
-          <mat-option value="option1">Not Started</mat-option>
-          <mat-option value="option2">In Progress</mat-option>
-          <mat-option value="option3">Completed</mat-option>
-        </mat-select>
-      </mat-form-field>
 
-  </div>
-</div>
 
 
 <!--// Training-->

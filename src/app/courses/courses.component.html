@@ -1,5 +1,26 @@
-<p>courses works!</p>
-<!--<div *ngIf="!coursesList">-->
+<div class="courses">
+  <!--<div class="courses"*ngIf="coursesList">-->
+  <!--****** NOTE: don't need ngIf directive and property courseList condition value setup ********-->
+  <div class="courses-button">
+    <button (click)="goBack()" mat-raised-button>
+      Back
+    </button>
+    <button (click)="goHome()" mat-raised-button>
+      Home
+    </button>
+  </div>
+  <div *ngFor = "let development of developmentPlan" class="development-plan">
+    <p [routerLink]="development.link">
+      {{development.courseName}}
+    </p>
+    <mat-form-field>
+      <mat-label>Select an option</mat-label>
+      <mat-select [(value)]="development.status">
+        <mat-option value="option1">Not Started</mat-option>
+        <mat-option value="option2">In Progress</mat-option>
+        <mat-option value="option3">Completed</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-<!--  TEST-->
-<!--</div>-->
+  </div>
+</div>
