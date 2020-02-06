@@ -1,1 +1,38 @@
-<p>login works!</p>
+<div class="login-wrapper">
+  <h1>Login</h1>
+  <p>
+    Please enter your details below :
+  </p>
+
+<!--  <form [formGroup]="loginForm">-->
+<!--      <input formControlName="name"/>-->
+<!--  </form>-->
+
+<!--  // * The above is the basic version of input. The below is a nicer looking mat-form-field-->
+
+  <form [formGroup]="loginForm" class="form-group">
+    <mat-form-field appearance="outline">
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="name"/>
+  </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input matInput formControlName="lname">
+    </mat-form-field>
+    <button (click)="goSubmit()" mat-raised-button>
+      Submit
+    </button>
+  </form>
+
+<div *ngIf="formData">
+  <h1>Hello
+    {{formData.userName}} {{formData.userLastName}}
+  </h1>
+</div>
+
+<!--&lt;!&ndash;  <div *ngIf="formData">&ndash;&gt;-->
+<!--&lt;!&ndash;  <h1>Hello   </h1>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--******* above message won't show objects(userName 'name' and userLastName 'lname' -->
+</div>

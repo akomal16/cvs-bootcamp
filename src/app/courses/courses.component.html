@@ -9,18 +9,18 @@
       Home
     </button>
   </div>
-  <div *ngFor = "let development of developmentPlan" class="development-plan">
-    <p [routerLink]="development.link">
-      {{development.courseName}}
-    </p>
-    <mat-form-field>
-      <mat-label>Select an option</mat-label>
-      <mat-select [(value)]="development.status">
-        <mat-option value="option1">Not Started</mat-option>
-        <mat-option value="option2">In Progress</mat-option>
-        <mat-option value="option3">Completed</mat-option>
-      </mat-select>
-    </mat-form-field>
 
-  </div>
+
+  <form [formGroup]="courseForm">
+    <div class="development-plan">
+      <mat-form-field *ngFor="let plan of angularPlan">
+        <mat-label>Select an option</mat-label>
+        <mat-select [formControlName]="'angularControl'">
+          <mat-option *ngFor="let option of plan.phases" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
 </div>

@@ -1,49 +1,68 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss']
 })
-export class CoursesComponent  {
+export class CoursesComponent implements OnInit {
+
+  constructor(private fb: FormBuilder) {
+  }
 
   title = 'CVS Bootcamp';
-  // coursesList = true;
   header = 'Courses Options';
+  courseForm: FormGroup;
 
-  developmentPlan = [
+  angularPlan = [
     {
-      status: 'Not Started',
+      status: 'Completed',
       courseName: 'Angular',
-      link: '/angular'
-    },
-    {
-      status: 'Not Started',
-      courseName: 'Java',
-      link: '/java',
-    },
-    {
-      status: 'Not Started',
-      courseName: 'HTML',
-      link: '/html',
-    },
-    {
-      status: 'Not Started',
-      courseName: 'CSS',
-      link: '/css',
-    },
-    {
-      status: 'Not Started',
-      courseName: 'JavaScript',
-      link: '/javascript',
-    },
+      link: '/angular',
+      phases: ['Not Started', 'In Progress', 'Completed']
+    }
   ];
 
-  // onCourses() {
-  //   this.coursesList = true;
-  //   this.header = 'Subject List';
-  //   this.title = 'my courses';
-  // }
+
+
+  // angularPlan = [
+  //   {
+  //     status: 'Not Started',
+  //     courseName: 'Java',
+  //     link: '/java',
+  //   },
+  //   {
+  //     status: 'Not Started',
+  //     courseName: 'HTML',
+  //     link: '/html',
+  //   },
+  //   {
+  //     status: 'Not Started',
+  //     courseName: 'CSS',
+  //     link: '/css',
+  //   },
+  //   {
+  //     status: 'Not Started',
+  //     courseName: 'JavaScript',
+  //     link: '/javascript',
+  //   },
+  // ];
+
+
+//   ngOnInit() {
+// this.courseForm = new FormGroup({
+// })
+//   }
+  ngOnInit() {
+    this.courseForm = this.fb.group({
+      angularControl: new FormControl()
+    });
+    const angularValue = this.angularPlan[0].status;
+    this.courseForm.get('angularControl').setValue(angularValue);
+    console.log(this.angularPlan[0].status);
+    console.log(this.courseForm);
+  }
 
   goBack() {
     // this.coursesList = false;

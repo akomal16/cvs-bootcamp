@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatFormFieldModule, MatSelectModule} from '@angular/material';
+import {MatButtonModule, MatFormFieldModule, MatInputModule, MatSelectModule} from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { AngularComponent } from './angular/angular.component';
 import { JavaComponent } from './java/java.component';
@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { AwardComponent } from './award/award.component';
 import {CourseService} from "./services/course-service";
 import { CoursesComponent } from './courses/courses.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import { CoursesComponent } from './courses/courses.component';
     MatButtonModule,
     MatFormFieldModule,
     MatSelectModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
