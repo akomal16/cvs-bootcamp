@@ -2,7 +2,7 @@
   <!--<div class="courses"*ngIf="coursesList">-->
   <!--****** NOTE: don't need ngIf directive and property courseList condition value setup ********-->
   <div class="courses-button">
-    <button (click)="goBack()" mat-raised-button>
+    <button mat-raised-button (click)="goBack()" >
       Back
     </button>
     <button (click)="goHome()" mat-raised-button>
@@ -12,15 +12,81 @@
 
 
   <form [formGroup]="courseForm">
-    <div class="development-plan">
+    <div class="courses-plan">
       <mat-form-field *ngFor="let plan of angularPlan">
-        <mat-label>Select an option</mat-label>
+            <mat-label>Angular</mat-label>
+<!--        <mat-label (click)="goAngular()">Angular</mat-label>-->
+<!--        <mat-label <button mat-raised-button (click)="goHome()"> >-->
+<!--        <button mat-raised-button [routrLink]="'/angular'">-->
+<!--          Login-->
+<!--        </button>-->
         <mat-select [formControlName]="'angularControl'">
           <mat-option *ngFor="let option of plan.phases" [value]="option">
             {{option}}
           </mat-option>
         </mat-select>
       </mat-form-field>
+      <button (click)="goAngular()" mat-raised-button>
+        Home
+      </button>
+
+      <mat-form-field *ngFor="let plan of javaPlan">
+        <mat-label>Java</mat-label>
+        <mat-select [formControlName]="'javaControl'">
+          <mat-option *ngFor="let option of plan.phases" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field *ngFor="let plan of htmlPlan">
+        <mat-label>HTML</mat-label>
+        <mat-select [formControlName]="'htmlControl'">
+          <mat-option *ngFor="let option of plan.phases" [value]="option">
+            {{option}}
+
+          </mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field *ngFor="let plan of cssPlan">
+        <mat-label>CSS</mat-label>
+        <mat-select [formControlName]="'cssControl'">
+
+<!--          Note for practice-->
+<!--          <mat-option *ngFor="let war of warwick">-->
+<!--            {{war.test2}}-->
+<!--            {{war.test}}-->
+<!--          </mat-option>-->
+
+
+          <!--   /this will give you option list and let you to select option from the drop menu-->
+          <mat-option *ngFor="let test of plan.courseName" [value]="test">
+          {{test}}
+
+        </mat-option>
+
+<!--   /this will give you option list but you won't be able to select option-->
+<!--          <mat-option *ngFor="let test of plan.courseName">-->
+<!--            {{test}}-->
+
+<!--          </mat-option>-->
+
+
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field *ngFor="let plan of javaScriptPlan">
+        <mat-label>JavaScript</mat-label>
+        <mat-select [formControlName]="'javaScriptControl'">
+          <mat-option *ngFor="let option of plan.phases" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
     </div>
   </form>
 </div>

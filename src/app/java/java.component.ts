@@ -1,5 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CourseService} from '../services/course-service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-java',
@@ -8,7 +9,7 @@ import {CourseService} from '../services/course-service';
 })
 export class JavaComponent implements OnInit, OnDestroy {
 
-  constructor(private courseService: CourseService) {
+  constructor(private courseService: CourseService, private backRouter: Router, private homeRouter: Router, ) {
   }
 
   title =  'Java Topics';
@@ -67,9 +68,13 @@ export class JavaComponent implements OnInit, OnDestroy {
   goBack() {
     this.coursesList = true;
     this.header = 'Choose Option';
+    this.backRouter.navigate(['/home']);
+    // this.homeRouter.navigate(['/home']);
   }
   goHome() {
     this.coursesList = false;
     this.header = 'Choose Option1111';
+    // this.backRouter.navigate(['/home']);
+    this.homeRouter.navigate(['/home']);
   }
 }
