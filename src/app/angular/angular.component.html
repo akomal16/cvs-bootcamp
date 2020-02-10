@@ -5,9 +5,18 @@
 </div>
 
 <div class="main-container">
-  <a [routerLink]="['/home']">
+  <a [routerLink]="['/courses']">
     Back
   </a>
+
+  <div class="courses-button">
+    <button (click)="goBack()" mat-raised-button>
+      Back
+    </button>
+    <button (click)="goHome()" mat-raised-button>
+      Home
+    </button>
+  </div>
 
   <div class="course-list">
     <ul>

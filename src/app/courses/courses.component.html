@@ -13,6 +13,7 @@
 
   <form [formGroup]="courseForm">
     <div class="courses-plan">
+      <div class="course-field">
       <mat-form-field *ngFor="let plan of angularPlan">
             <mat-label>Angular</mat-label>
 <!--        <mat-label (click)="goAngular()">Angular</mat-label>-->
@@ -27,9 +28,11 @@
         </mat-select>
       </mat-form-field>
       <button (click)="goAngular()" mat-raised-button>
-        Home
+        Angular
       </button>
+      </div>
 
+      <div class="course-field">
       <mat-form-field *ngFor="let plan of javaPlan">
         <mat-label>Java</mat-label>
         <mat-select [formControlName]="'javaControl'">
@@ -38,7 +41,12 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
+      <button (click)="goJava()" mat-raised-button>
+        Java
+      </button>
+      </div>
 
+      <div class="course-field">
       <mat-form-field *ngFor="let plan of htmlPlan">
         <mat-label>HTML</mat-label>
         <mat-select [formControlName]="'htmlControl'">
@@ -50,16 +58,21 @@
         </mat-select>
       </mat-form-field>
 
+      <button (click)="goHtml()" mat-raised-button>
+        HTML
+      </button>
+    </div>
+
+      <div class="course-field">
       <mat-form-field *ngFor="let plan of cssPlan">
         <mat-label>CSS</mat-label>
         <mat-select [formControlName]="'cssControl'">
 
 <!--          Note for practice-->
-<!--          <mat-option *ngFor="let war of warwick">-->
-<!--            {{war.test2}}-->
-<!--            {{war.test}}-->
-<!--          </mat-option>-->
-
+          <!--          <mat-option *ngFor="let war of warwick">-->
+          <!--            {{war.test2}}-->
+          <!--            {{war.test}}-->
+          <!--          </mat-option>-->
 
           <!--   /this will give you option list and let you to select option from the drop menu-->
           <mat-option *ngFor="let test of plan.courseName" [value]="test">
@@ -76,8 +89,12 @@
 
         </mat-select>
       </mat-form-field>
+        <button (click)="goCss()" mat-raised-button>
+          CSS
+        </button>
+      </div>
 
-      <mat-form-field *ngFor="let plan of javaScriptPlan">
+      <div class="course-field">      <mat-form-field *ngFor="let plan of javaScriptPlan">
         <mat-label>JavaScript</mat-label>
         <mat-select [formControlName]="'javaScriptControl'">
           <mat-option *ngFor="let option of plan.phases" [value]="option">
@@ -86,6 +103,10 @@
         </mat-select>
       </mat-form-field>
 
+      <button (click)="goJavaScript()" mat-raised-button>
+        JavaScript
+      </button>
+    </div>
 
     </div>
   </form>

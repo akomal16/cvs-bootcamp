@@ -28,10 +28,9 @@ xdescribe('AngularComponent', () => {
   });
   it('should have class title header ', () => {
     const comp = fixture.debugElement.componentInstance;
-    // const header = comp.nati
-    // expect (comp)
   });
-  fit(`should render correct title`, () => {
+
+  it(`should render correct title`, () => {
     const amar = fixture.debugElement.componentInstance;
     expect(amar.title).toEqual('Angular Topics');
   });

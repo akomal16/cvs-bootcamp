@@ -1,12 +1,17 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CourseService} from '../services/course-service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-html',
   templateUrl: './html.component.html',
   styleUrls: ['./html.component.scss']
 })
-export class HtmlComponent {
+export class HtmlComponent implements  OnInit {
+
+  constructor(private backRouter: Router, private  homeRouter: Router, ) {
+
+  }
 
   title = 'HTML Topics';
   htmlPlan = [
@@ -52,4 +57,15 @@ export class HtmlComponent {
   // ngOnDestroy() {
   //   console.log('This is on HTML component removal');
   // }
+  ngOnInit() {
+
+  }
+
+  goBack() {
+    this.backRouter.navigate(['/courses']);
+  }
+  goHome() {
+    this.homeRouter.navigate(['/home']);
+  }
+
 }

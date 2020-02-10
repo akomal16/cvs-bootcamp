@@ -10,7 +10,9 @@ import {Router} from '@angular/router';
 export class CoursesComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private backRouter: Router, private homeRouter: Router,
-              private angularRouter: Router, ) {
+              private angularRouter: Router,  private javaRouter: Router,
+              private htmlRouter: Router, private cssRouter: Router,
+              private javaScriptRouter: Router) {
   }
   // constructor(private coursesRouter: Router, ) {
   //
@@ -136,15 +138,12 @@ export class CoursesComponent implements OnInit {
   }
 
   goBack() {
-    // this.coursesList = false;
     this.header = 'Choose Option';
     // this.coursesRouter.navigate(['/home']);
     this.backRouter.navigate(['/home']);
 
   }
   goHome() {
-    // this.coursesList = false;
-    this.header = 'Choose Option2222';
     this.homeRouter.navigate(['/home']);
   }
 
@@ -152,4 +151,20 @@ export class CoursesComponent implements OnInit {
     this.angularRouter.navigate(['/angular']);
     // console.log(amar);
   }
+
+  goJava() {
+  this.javaRouter.navigate(['/java']);
+  }
+
+  goHtml() {
+    this.htmlRouter.navigate(['/html']);
+  }
+
+  goCss() {
+    this.cssRouter.navigate(['/css']);
+  }
+  goJavaScript() {
+    this.javaScriptRouter.navigate(['/javascript']);
+  }
+
 }

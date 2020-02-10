@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-javascript',
   templateUrl: './javascript.component.html',
   styleUrls: ['./javascript.component.scss']
 })
-export class JavascriptComponent {
+
+export class JavascriptComponent implements OnInit {
+
+  constructor(private backRouter: Router, private  homeRouter: Router, ) {
+
+  }
 
   title = 'JavaScript Topics';
 
@@ -39,4 +45,16 @@ export class JavascriptComponent {
       status: 'Not Started',
     },
   ];
+
+  ngOnInit() {
+
+  }
+
+  goBack() {
+    this.backRouter.navigate(['/courses']);
+  }
+  goHome() {
+    this.homeRouter.navigate(['/home']);
+  }
 }
+

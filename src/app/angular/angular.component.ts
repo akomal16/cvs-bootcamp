@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-angular',
   templateUrl: './angular.component.html',
   styleUrls: ['./angular.component.scss']
 })
-export class AngularComponent {
+export class AngularComponent implements OnInit {
+
+  constructor(private backRouter: Router, private  homeRouter: Router, ) {
+
+  }
 
   title = 'Angular Topics';
   angularTopics = [
@@ -46,4 +51,14 @@ export class AngularComponent {
       status: 'Not Started'
     }
   ];
+  ngOnInit() {
+
+  }
+
+  goBack() {
+    this.backRouter.navigate(['/courses']);
+  }
+  goHome() {
+    this.homeRouter.navigate(['/home']);
+  }
 }

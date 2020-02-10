@@ -46,3 +46,17 @@ ul {
 .done {
   color: #4974ff;
 }
+
+
+.courses-button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  button {
+    margin: 24px;
+    align-self: end;
+    color: #b52a25;
+    background-color: ghostwhite;
+  }
+}

@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-css',
   templateUrl: './css.component.html',
   styleUrls: ['./css.component.scss']
 })
-export class CssComponent {
+export class CssComponent implements OnInit {
+
+  constructor(private backRouter: Router, private  homeRouter: Router, ) {
+
+  }
 
   title =  'CSS Topics';
   cssPlan = [
@@ -46,4 +51,16 @@ export class CssComponent {
       status: 'In Progress',
     },
   ];
+
+  ngOnInit() {
+
+  }
+
+  goBack() {
+    this.backRouter.navigate(['/courses']);
+  }
+  goHome() {
+    this.homeRouter.navigate(['/home']);
+  }
+
 }
